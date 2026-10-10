@@ -2,7 +2,7 @@
   <div id="app">
     <nav class="navbar">
       <div class="nav-container">
-        <div class="logo">Ramzy</div>
+        <div class="logo">RAMZY</div>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -14,13 +14,25 @@
 
     <section id="home" class="hero">
       <div class="hero-content">
-        <h1>Hi, I'm Ramzy</h1>
-        <p class="subtitle">Full Stack Developer & Creative Problem Solver</p>
-        <p class="description">Building modern web applications with cutting-edge technologies</p>
-        <button class="cta-button" @click="scrollTo('projects')">View My Work</button>
+        <p class="eyebrow">Full-Stack Developer</p>
+        <h1>Ramzy Hassan</h1>
+        <p class="subtitle">I build fast, elegant, and performance-driven digital experiences.</p>
+        <p class="description">
+          I design and develop modern web products, interactive dashboards, and scalable frontend experiences for startups and businesses.
+        </p>
+        <div class="hero-actions">
+          <button class="cta-button" @click="scrollTo('projects')">View Projects</button>
+          <a class="secondary-button" href="#contact">Hire Me</a>
+        </div>
       </div>
       <div class="hero-visual">
-        <div class="floating-card">💻</div>
+        <div class="profile-card">
+          <div class="avatar">RH</div>
+          <div class="profile-meta">
+            <span class="profile-label">Available for work</span>
+            <strong>Frontend • Backend • UI/UX</strong>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -29,34 +41,43 @@
         <h2>About Me</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>I'm a passionate developer with expertise in building scalable web applications. I love combining clean code with beautiful design to create exceptional user experiences.</p>
-            <div class="skills">
-              <h3>Skills</h3>
-              <div class="skill-tags">
-                <span class="tag">Vue.js</span>
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">REST APIs</span>
-                <span class="tag">Git</span>
-              </div>
+            <p>
+              I’m a developer focused on creating polished interfaces and high-performing applications. My work combines clean architecture,
+              thoughtful user experience, and product-focused thinking.
+            </p>
+            <p>
+              From trading dashboards and SaaS tools to portfolio sites and internal business apps, I enjoy turning complex ideas into simple,
+              useful products that people actually enjoy using.
+            </p>
+          </div>
+          <div class="info-panel">
+            <div class="info-box">
+              <span class="info-label">Experience</span>
+              <strong>5+ Years</strong>
+            </div>
+            <div class="info-box">
+              <span class="info-label">Specialization</span>
+              <strong>Web Development</strong>
+            </div>
+            <div class="info-box">
+              <span class="info-label">Location</span>
+              <strong>Remote / Global</strong>
             </div>
           </div>
-          <div class="stats">
-            <div class="stat-box">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Projects</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">100+</div>
-              <div class="stat-label">Happy Clients</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">5+</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
+        </div>
+
+        <div class="skills">
+          <h3>Core Skills</h3>
+          <div class="skill-tags">
+            <span class="tag">Vue</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Git</span>
+            <span class="tag">UI Design</span>
+            <span class="tag">Performance</span>
           </div>
         </div>
       </div>
@@ -73,7 +94,7 @@
             <div class="project-tags">
               <span v-for="tech in project.tech" :key="tech" class="tech-tag">{{ tech }}</span>
             </div>
-            <a href="#" class="project-link">Learn More →</a>
+            <a href="#" class="project-link">Case Study →</a>
           </div>
         </div>
       </div>
@@ -81,18 +102,18 @@
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Let's Work Together</h2>
-        <p class="contact-subtitle">Have an interesting project? I'd love to hear from you.</p>
+        <h2>Let’s Build Something Great</h2>
+        <p class="contact-subtitle">I’m available for freelance work, product building, and long-term collaborations.</p>
         <div class="contact-links">
-          <a href="mailto:your-email@example.com" class="contact-button">Email Me</a>
-          <a href="https://github.com" target="_blank" class="contact-button secondary">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" class="contact-button secondary">LinkedIn</a>
+          <a href="mailto:ramzy@example.com" class="contact-button">Email Me</a>
+          <a href="https://github.com/GgRAMZI-g" target="_blank" class="contact-button secondary">GitHub</a>
+          <a href="https://www.linkedin.com" target="_blank" class="contact-button secondary">LinkedIn</a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <p>&copy; 2026 Ramzy. All rights reserved.</p>
+      <p>© 2026 Ramzy Hassan. Built with Vue.js.</p>
     </footer>
   </div>
 </template>
@@ -104,45 +125,45 @@ export default {
       projects: [
         {
           id: 1,
-          title: "E-Commerce Platform",
-          description: "A full-featured shopping platform with real-time inventory management and payment integration.",
-          icon: "🛒",
-          tech: ["Vue.js", "Node.js", "MongoDB"]
+          title: 'TradePulse Dashboard',
+          description: 'A real-time analytics dashboard for tracking market performance, alerts, and portfolio movement in a clean UI.',
+          icon: '📈',
+          tech: ['Vue', 'Chart.js', 'REST API']
         },
         {
           id: 2,
-          title: "Task Management App",
-          description: "Collaborative task management tool with real-time updates and team collaboration features.",
-          icon: "✓",
-          tech: ["React", "Firebase", "Tailwind"]
+          title: 'Crypto Portfolio Tracker',
+          description: 'A web app for monitoring balances, gains, and historical trends across multiple wallet positions.',
+          icon: '₿',
+          tech: ['Vue', 'Node.js', 'MongoDB']
         },
         {
           id: 3,
-          title: "Analytics Dashboard",
-          description: "Interactive data visualization dashboard for tracking business metrics and KPIs.",
-          icon: "📊",
-          tech: ["Vue.js", "D3.js", "Express"]
+          title: 'SaaS Admin Panel',
+          description: 'A scalable internal dashboard for managing users, metrics, subscriptions, and operational workflows.',
+          icon: '🧩',
+          tech: ['React', 'TypeScript', 'Tailwind']
         },
         {
           id: 4,
-          title: "Social Media App",
-          description: "Modern social platform with real-time messaging, notifications, and user interactions.",
-          icon: "👥",
-          tech: ["React", "WebSocket", "PostgreSQL"]
+          title: 'Launch Landing Page',
+          description: 'An optimized startup landing page designed to turn traffic into conversions with strong storytelling and CTAs.',
+          icon: '🚀',
+          tech: ['Vue', 'CSS', 'Performance']
         },
         {
           id: 5,
-          title: "AI Content Generator",
-          description: "Smart content generation tool powered by AI for creating blog posts and marketing copy.",
-          icon: "✨",
-          tech: ["Vue.js", "OpenAI API", "Python"]
+          title: 'Market Scanner',
+          description: 'A signal dashboard using live data feeds to highlight patterns, opportunities, and market conditions.',
+          icon: '🔎',
+          tech: ['JavaScript', 'APIs', 'UI Design']
         },
         {
           id: 6,
-          title: "Weather Dashboard",
-          description: "Beautiful weather application with real-time forecasts and interactive maps.",
-          icon: "🌤️",
-          tech: ["Vue.js", "Weather API", "Mapbox"]
+          title: 'Business Intelligence App',
+          description: 'An interactive reporting dashboard that combines multiple data sources into one actionable overview.',
+          icon: '📊',
+          tech: ['Vue', 'Analytics', 'Automation']
         }
       ]
     }
@@ -165,276 +186,312 @@ export default {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #app {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background: #fff;
+  color: #0f172a;
+  background: #f8fafc;
 }
 
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  z-index: 100;
+  z-index: 50;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
 }
 
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #42b983;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #42b983;
-}
-
+.nav-container,
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  color: #0f172a;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 600;
+}
+
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  gap: 4rem;
-  padding: 6rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  min-height: 600px;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem 4rem;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 1;
   margin-bottom: 1rem;
-  font-weight: 700;
+  color: #0f172a;
 }
 
-.hero-content .subtitle {
-  font-size: 1.5rem;
+.subtitle {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  color: #334155;
   margin-bottom: 1rem;
-  opacity: 0.95;
 }
 
-.hero-content .description {
+.description {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  line-height: 1.6;
+  color: #475569;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta-button,
+.secondary-button,
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 1.7rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cta-button {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  background: white;
-  color: #667eea;
   border: none;
-  border-radius: 50px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
   cursor: pointer;
-  font-weight: 600;
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.28);
 }
 
-.cta-button:hover {
+.secondary-button {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.cta-button:hover,
+.secondary-button:hover,
+.contact-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .hero-visual {
   display: flex;
   justify-content: center;
+}
+
+.profile-card {
+  width: min(100%, 340px);
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-radius: 24px;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.22);
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  margin-bottom: 1.5rem;
 }
 
-.floating-card {
-  font-size: 8rem;
-  animation: float 3s ease-in-out infinite;
+.profile-label {
+  display: block;
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+.about,
+.projects,
+.contact {
+  padding: 6rem 0;
 }
 
 .about {
-  padding: 6rem 0;
-  background: #f8f9fa;
+  background: #fff;
 }
 
 .about h2,
 .projects h2,
 .contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   text-align: center;
-  color: #333;
+  margin-bottom: 2.5rem;
 }
 
 .about-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
 }
 
 .about-text p {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   line-height: 1.8;
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-.skills h3 {
-  font-size: 1.3rem;
+  color: #475569;
   margin-bottom: 1rem;
 }
 
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tag {
-  background: #42b983;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
-
-.stats {
+.info-panel {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
-.stat-box {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+.info-box {
+  background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  padding: 1.3rem 1rem;
 }
 
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #42b983;
+.info-label {
+  display: block;
+  font-size: 0.78rem;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.09rem;
+  margin-bottom: 0.35rem;
 }
 
-.stat-label {
-  font-size: 0.95rem;
-  color: #666;
-  margin-top: 0.5rem;
+.skills {
+  margin-top: 2.5rem;
+}
+
+.skills h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.skill-tags,
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag,
+.tech-tag {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #334155;
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .projects {
-  padding: 6rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
 .project-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #fff;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.09);
 }
 
 .project-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .project-card h3 {
   font-size: 1.3rem;
-  margin-bottom: 0.75rem;
-  color: #333;
+  margin-bottom: 0.7rem;
 }
 
 .project-card p {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.tech-tag {
-  background: #f0f0f0;
-  color: #666;
-  padding: 0.4rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.7;
+  min-height: 110px;
 }
 
 .project-link {
-  color: #42b983;
+  display: inline-block;
+  margin-top: 1rem;
+  color: #2563eb;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.project-link:hover {
-  color: #359268;
+  font-weight: 700;
 }
 
 .contact {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  text-align: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
 }
 
 .contact-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 1.08rem;
 }
 
 .contact-links {
@@ -445,73 +502,52 @@ export default {
 }
 
 .contact-button {
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s;
-  display: inline-block;
-}
-
-.contact-button {
-  background: white;
-  color: #667eea;
-}
-
-.contact-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: #0f172a;
 }
 
 .contact-button.secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.contact-button.secondary:hover {
-  background: white;
-  color: #667eea;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
 }
 
 .footer {
-  background: #333;
-  color: white;
+  padding: 1.5rem 0;
+  background: #020817;
+  color: #cbd5e1;
   text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .hero {
     grid-template-columns: 1fr;
-    padding: 3rem 1rem;
-    min-height: auto;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .hero-visual {
-    display: none;
+    padding-top: 3rem;
   }
 
   .about-content {
     grid-template-columns: 1fr;
   }
 
-  .nav-links {
-    gap: 1rem;
-    font-size: 0.9rem;
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .contact-button {
+    width: min(100%, 220px);
   }
 }
 </style>
